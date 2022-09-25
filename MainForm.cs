@@ -15,7 +15,7 @@ namespace GoExe_Editor
     public partial class MainForm : Form
     {
         string[] EditorLines;
-        public static string Version = "1.0.1";
+        public static string Version = "1.0.2";
         public MainForm()
         {
             InitializeComponent();
@@ -41,6 +41,7 @@ namespace GoExe_Editor
         {
             if (SaveFile.ShowDialog() == DialogResult.OK)
             {
+                EditorLines = TextBox.Lines;
                 File.WriteAllLines(SaveFile.FileName + ".goexe", EditorLines);
                 Text = "GoCode Editor - " + SaveFile.FileName;
             }
@@ -60,10 +61,9 @@ namespace GoExe_Editor
 
         private void deleteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            if (OpenFile.FileName.Length != 0)
+            if (DeleteFile.ShowDialog() == DialogResult.OK)
             {
-                File.Delete(OpenFile.FileName);
-                TextBox.Text = "";
+                File.Delete(DeleteFile.FileName);
             }
         }
 

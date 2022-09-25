@@ -40,6 +40,7 @@
             this.OpenFile = new System.Windows.Forms.OpenFileDialog();
             this.SaveFile = new System.Windows.Forms.SaveFileDialog();
             this.wikiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeleteFile = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,7 +124,7 @@
             // SaveFile
             // 
             this.SaveFile.FileName = "MyProgram";
-            this.SaveFile.Filter = "GoExe files|*.goexe*";
+            this.SaveFile.Filter = "GoCode files|*.goexe*";
             this.SaveFile.Title = "Save code as...";
             // 
             // wikiToolStripMenuItem
@@ -132,6 +133,11 @@
             this.wikiToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.wikiToolStripMenuItem.Text = "Wiki";
             this.wikiToolStripMenuItem.Click += new System.EventHandler(this.wikiToolStripMenuItem_Click);
+            // 
+            // DeleteFile
+            // 
+            this.DeleteFile.Filter = "GoCode files|*.goexe*";
+            this.DeleteFile.Title = "Delete file...";
             // 
             // MainForm
             // 
@@ -164,6 +170,7 @@
         private System.Windows.Forms.SaveFileDialog SaveFile;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem wikiToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog DeleteFile;
     }
 }
 
