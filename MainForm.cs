@@ -8,30 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using System.CodeDom;
-using System.Threading;
+using System.Diagnostics;
 
 namespace GoExe_Editor
 {
     public partial class MainForm : Form
     {
         string[] EditorLines;
+        public static string Version = "1.0.1";
         public MainForm()
         {
             InitializeComponent();
             EditorLines = TextBox.Lines;
         }
 
-        private void removeLineToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RemoveForm rfrm = new RemoveForm();
-            rfrm.ShowDialog();
-            if (RemoveForm.CanDelete == true)
-            {
-                EditorLines[RemoveForm.LineInt] = "";
-                UpdateLines();
-            }
-        }
         public void UpdateLines()
         {
             TextBox.Lines = EditorLines;
@@ -42,6 +32,7 @@ namespace GoExe_Editor
             if (OpenFile.ShowDialog() == DialogResult.OK)
             {
                 EditorLines = File.ReadAllLines(OpenFile.FileName);
+                Text = "GoCode Editor - " + OpenFile.FileName;
                 UpdateLines();
             }
         }
@@ -51,15 +42,23 @@ namespace GoExe_Editor
             if (SaveFile.ShowDialog() == DialogResult.OK)
             {
                 File.WriteAllLines(SaveFile.FileName + ".goexe", EditorLines);
+                Text = "GoCode Editor - " + SaveFile.FileName;
             }
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TextBox.Text = "";
+            EditorLines = null;
         }
 
-        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutForm afrm = new AboutForm();
+            afrm.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             if (OpenFile.FileName.Length != 0)
             {
@@ -68,21 +67,9 @@ namespace GoExe_Editor
             }
         }
 
-        private void goToToolStripMenuItem_Click(object sender, EventArgs e)
+        private void wikiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditForm efrm = new EditForm();
-            efrm.ShowDialog();
-            if (EditForm.CanEdit == true)
-            {
-                EditorLines[RemoveForm.LineInt] = EditForm.LineString;
-                UpdateLines();
-            }
-        }
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AboutForm afrm = new AboutForm();
-            afrm.ShowDialog();
+            Process.Start("https://github.com/Owen2k6/GoOS/wiki/Using-GoCode"); 
         }
     }
 }

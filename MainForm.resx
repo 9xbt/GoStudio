@@ -120,6 +120,15 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="TextBox.Text" xml:space="preserve">
+    <value># Welcome to your first program of GoCode!
+# Annotations are stored with "#"!
+# Here is an example program:
+
+print=Hello World! Say something and it will be echoed back!
+input=
+print=You said {getInput}!</value>
+  </data>
   <metadata name="OpenFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 17</value>
   </metadata>

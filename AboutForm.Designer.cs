@@ -50,9 +50,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(50, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 13);
+            this.label1.Size = new System.Drawing.Size(76, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "GoCode Editor v1.0.0";
+            this.label1.Text = "GoCode Editor";
             // 
             // label2
             // 
@@ -88,7 +88,7 @@
             this.MinimizeBox = false;
             this.Name = "AboutForm";
             this.ShowInTaskbar = false;
-            this.Text = "About GoCode editor";
+            this.Text = "About GoCode Editor";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

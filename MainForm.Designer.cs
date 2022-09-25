@@ -35,13 +35,11 @@
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.goToToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.removeLineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TextBox = new System.Windows.Forms.RichTextBox();
             this.OpenFile = new System.Windows.Forms.OpenFileDialog();
             this.SaveFile = new System.Windows.Forms.SaveFileDialog();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wikiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +47,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.wikiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(304, 24);
@@ -94,30 +92,14 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click_1);
             // 
-            // editToolStripMenuItem
+            // aboutToolStripMenuItem
             // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.goToToolStripMenuItem,
-            this.removeLineToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // goToToolStripMenuItem
-            // 
-            this.goToToolStripMenuItem.Name = "goToToolStripMenuItem";
-            this.goToToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.goToToolStripMenuItem.Text = "Edit line";
-            this.goToToolStripMenuItem.Click += new System.EventHandler(this.goToToolStripMenuItem_Click);
-            // 
-            // removeLineToolStripMenuItem
-            // 
-            this.removeLineToolStripMenuItem.Name = "removeLineToolStripMenuItem";
-            this.removeLineToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
-            this.removeLineToolStripMenuItem.Text = "Remove line";
-            this.removeLineToolStripMenuItem.Click += new System.EventHandler(this.removeLineToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // TextBox
             // 
@@ -131,24 +113,25 @@
             this.TextBox.Name = "TextBox";
             this.TextBox.Size = new System.Drawing.Size(304, 337);
             this.TextBox.TabIndex = 2;
-            this.TextBox.Text = "# Welcome to your first program!\n# Annotations are stored with \"#\"!\n# Here is an " +
-    "example program:\n\nprint=Hello World! Say something and it will be echoed back!\ni" +
-    "nput=\nprint=You said {getInput}!";
+            this.TextBox.Text = resources.GetString("TextBox.Text");
             // 
             // OpenFile
             // 
             this.OpenFile.Filter = "GoCode Files|*.goexe*";
+            this.OpenFile.Title = "Open code...";
             // 
             // SaveFile
             // 
+            this.SaveFile.FileName = "MyProgram";
             this.SaveFile.Filter = "GoExe files|*.goexe*";
+            this.SaveFile.Title = "Save code as...";
             // 
-            // aboutToolStripMenuItem
+            // wikiToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.aboutToolStripMenuItem.Text = "About";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.wikiToolStripMenuItem.Name = "wikiToolStripMenuItem";
+            this.wikiToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
+            this.wikiToolStripMenuItem.Text = "Wiki";
+            this.wikiToolStripMenuItem.Click += new System.EventHandler(this.wikiToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -160,7 +143,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "GoCode Editor";
+            this.Text = "GoCode Editor - MyProgram.goexe";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -176,13 +159,11 @@
         private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem removeLineToolStripMenuItem;
         private System.Windows.Forms.RichTextBox TextBox;
         private System.Windows.Forms.OpenFileDialog OpenFile;
         private System.Windows.Forms.SaveFileDialog SaveFile;
-        private System.Windows.Forms.ToolStripMenuItem goToToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wikiToolStripMenuItem;
     }
 }
 
