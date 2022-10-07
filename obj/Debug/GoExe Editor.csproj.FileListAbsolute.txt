@@ -10,3 +10,15 @@ C:\Users\Eric\source\repos\GoExe Editor\obj\Release\GoExe Editor.csproj.Generate
 C:\Users\Eric\source\repos\GoExe Editor\obj\Release\GoExe Editor.csproj.CoreCompileInputs.cache
 C:\Users\Eric\source\repos\GoExe Editor\obj\Release\GoExe Editor.exe
 C:\Users\Eric\source\repos\GoExe Editor\obj\Release\GoExe Editor.pdb
+C:\Users\Eric\source\repos\GoExe Editor\bin\Debug\GoExe Editor.exe.config
+C:\Users\Eric\source\repos\GoExe Editor\bin\Debug\GoExe Editor.exe
+C:\Users\Eric\source\repos\GoExe Editor\bin\Debug\GoExe Editor.pdb
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe Editor.csproj.AssemblyReference.cache
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe Editor.csproj.SuggestedBindingRedirects.cache
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe_Editor.AboutForm.resources
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe_Editor.MainForm.resources
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe_Editor.Properties.Resources.resources
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe Editor.csproj.GenerateResource.cache
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe Editor.csproj.CoreCompileInputs.cache
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe Editor.exe
+C:\Users\Eric\source\repos\GoExe Editor\obj\Debug\GoExe Editor.pdb
