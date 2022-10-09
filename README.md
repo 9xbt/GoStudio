@@ -5,4 +5,4 @@ GoStudio is an editor for GoOS code.
 => Has colors for functions.
 # Notes
 => Trying to fix website so you can see the wiki from there.
-=> Software is open source, no license at all, do whatever you want with it. I don't care
+=> Software is open source, no license at all, do whatever you want with it.
