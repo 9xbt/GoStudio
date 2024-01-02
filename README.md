@@ -1,10 +1,12 @@
 # GoStudio
-GoStudio is an editor for GoOS code.
+A GoCode editor for Microsoft Windows
 
-=> Supports saving and loading with .goexe file format.
+## Features
+- Supports saving and loading files with .goexe file format
 
-=> Has a wiki link for the commands that GoCode supports.
+- Has a wiki link for the GoCode documentation
 
-=> Has colors for functions.
-# Notes
-Software is open source, no license at all, do the hell you want to do with it.
+- Has syntax highlighting
+
+> [!Note]
+> GoStudio for Microsoft Windows is no longer supported, instead check out GoIDE for GoOS
